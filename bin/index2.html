@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="GET">
+        <select name="sfw" id="sfw" class="select select-bordered w-full max-w-xs">
+            <option value="" disabled selected>~Select~</option>
+            <option value="waifu">Waifu</option>
+            <option value="neko">Neko</option>
+            <option value="megumin">Megumin</option>
+        </select>
+        <button type="button" id="sfw-submit"
+            class="btn btn-success btn-sm mt-3 float-end text-sm text-white active:bg-green-900">Generate
+        </button>
+    </form>
+    <script>
+        document.getElementById('sfw-submit').addEventListener('click', function () {
+            console.log('Button clicked');
+            const selectedValue = document.getElementById('sfw').value;
+            console.log('Selected value:', selectedValue);
+        });
+    </script>
+</body>
+
+</html>

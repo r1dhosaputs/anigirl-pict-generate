@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Ani Girl</title>
+</head>
+
+<body>
+
+    <h1 class="text-4xl text-center mt-5 font-semibold">Anime Girl Pict Regenerate</h1>
+
+    <div class="container flex justify-center items-center max-w-full mt-[1.7rem]">
+        <!-- <select name="" id="image-category">
+            <option value="nsfw">NSFW</option>
+            <option value="fsw">FSW</option>
+        </select> -->
+        <div class="flex gap-2">
+            <button id="nsfw-button"
+                class="btn btn-info text-white fw-semibold text-xl focus:outline-none focus:ring focus:ring-slate-500 focus:shadow-md">NSFW</button>
+            <button id="sfw-button"
+                class="btn btn-secondary text-white fw-semibold text-xl focus:outline-none focus:ring focus:ring-slate-500 focus:shadow-md">SFW</button>
+        </div>
+    </div>
+
+    <div class="container flex justify-center items-center max-w-full">
+        <div id="nsfw-list" class="list hidden mt-4">
+            <form action="" method="GET">
+                <select name="nsfw" id="nsfw" class="select select-bordered w-full max-w-xs">
+                    <option value="" disabled selected>~Select~</option>
+                    <option value="waifu">Waifu</option>
+                    <option value="neko">Neko</option>
+                    <option value="trap">Trap</option>
+                    <option value="blowjob">Blowjob</option>
+                </select>
+                <button type="button" id="nsfw-submit"
+                    class="btn btn-success btn-sm mt-3 float-end text-sm text-white active:bg-green-900">Generate</button>
+            </form>
+        </div>
+
+        <div id="sfw-list" class=" mt-4">
+            <form action="" method="GET">
+                <select name="sfw" id="sfw" class="select select-bordered w-full max-w-xs">
+                    <option value="" disabled selected>~Select~</option>
+                    <option value="waifu">Waifu</option>
+                    <option value="neko">Neko</option>
+                    <option value="megumin">Megumin</option>
+                </select>
+                <div class="flex gap-[1rem] justify-between items-center flex-row ">
+                    <p class="mt-3">default is sfw, <br>click if you want <br>nsfw</p>
+                    <button type="button" id="sfw-submit"
+                        class="btn btn-success btn-sm mt-3 text-sm text-white active:bg-green-900">Generate</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="container flex justify-center items-center max-w-full mt-10">
+        <div class="card w-96 bg-base-100 shadow-xl">
+            <img id="result-image" src="" alt="###" />
+            <div class="card-body p-[1rem]">
+                <div class="card-actions justify-end">
+                    <button type="button" id="download-btn" class="badge badge-outline"
+                        onclick="downloadImage()">Download</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
